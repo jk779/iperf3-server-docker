@@ -1,0 +1,10 @@
+services:
+  iperf3-server-docker:
+    image: networkstatic/iperf3:latest
+    container_name: iperf3-server-docker
+    restart: unless-stopped
+    ports:
+      - 5201:5201
+    stdin_open: true
+    tty: true
+    command: -s
